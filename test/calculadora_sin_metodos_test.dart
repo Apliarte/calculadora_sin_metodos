@@ -1,5 +1,6 @@
-import 'package:calculadora_sin_metodos/calculadora_sin_metodos.dart';
 import 'package:test/test.dart';
+
+import '../funciones/calculadora_sin_metodos.dart';
 
 void main() {
   test('calculate', () {
