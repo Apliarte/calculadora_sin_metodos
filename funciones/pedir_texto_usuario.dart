@@ -1,5 +1,5 @@
-import 'dart:convert';
-import 'dart:io';
+
+import '../barril.dart';
 
 String getInputText() {
   print('por favor, ingrese un texto EN FORMATO ESPAÑOL');
