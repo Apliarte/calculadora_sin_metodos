@@ -1,5 +1,6 @@
 import 'barril.dart';
 
+
 const FORMATO_VALIDO_NUMEROS_ESPANIA = '1234567890,.';
 const FORMATO_VALIDO_NUMEROS_ENTEROS = '1234567890';
 const mapaNum = {
@@ -15,6 +16,6 @@ const mapaNum = {
   '0': 0
 };
 void main() {
-  print(textoToint('1234'));
-  // pedir un numero al usuario
+ 
+  print(miSplit('1,2,3,4,5,6',','));
 }

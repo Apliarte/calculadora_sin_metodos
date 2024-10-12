@@ -6,3 +6,5 @@ export 'dart:io';
 export 'package:matcher/expect.dart';
 export 'funciones/contiene_caracteres_validos.dart';
 export 'funciones/texo_a_numero.dart';
+export 'funciones/invertir.dart';
+export 'funciones/partir_cadena.dart';
