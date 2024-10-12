@@ -1,7 +1,7 @@
 import '../barril.dart';
 import 'longitud.dart';
 
-bool caracterEnTexto(String caracter, String caracteresValidos) {
+bool caracterEnObjeto(String caracter,  caracteresValidos) {
   for (int i = 0; i < longitud(caracteresValidos); i++) {
     if (caracter == caracteresValidos[i]) {
     return true;}
