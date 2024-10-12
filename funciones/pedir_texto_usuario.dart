@@ -1,11 +1,14 @@
-
 import '../barril.dart';
 
-String getInputText() {
-  print('por favor, ingrese un texto EN FORMATO ESPAÑOL');
-
-  String texto = stdin.readLineSync() ?? '';
-
+String getInputText(String mensaje) {
+  String texto;
+  print(mensaje);
+  do {
+    texto = stdin.readLineSync() ?? '';
+    if (texto == '') {
+      print('hubo un fallo en el sistema ingrese de nuevo un numero');
+    }
+  } while (texto == '');
 
   return texto;
 }
