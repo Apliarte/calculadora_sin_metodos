@@ -19,5 +19,6 @@ void main() {
   String num2 = getInputText('Escriba el SEGUNDO numero');
 
   num resultado = convertirTextoNumDart(num1) + convertirTextoNumDart(num2);
-  print('El resultado es $resultado');
+  print('El resultado es $resultado'); 
+
 }

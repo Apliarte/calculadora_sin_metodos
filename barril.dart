@@ -8,3 +8,4 @@ export 'funciones/validaciones.dart';
 export 'funciones/texo_a_numero.dart';
 export 'funciones/invertir.dart';
 export 'funciones/partir_cadena.dart';
+export 'main.dart';

@@ -1,9 +1,8 @@
 import '../barril.dart';
 
-
-
-bool empiezaNumer(texto) {
-  return false;
+bool empiezaYtermunaNumer(texto) {
+  return contCarValid(texto[0], FORMATO_VALIDO_NUMEROS_ENTEROS)&&
+  contCarValid(texto[longitud(texto)-1], FORMATO_VALIDO_NUMEROS_ENTEROS);
 }
 
 bool terminaNumer(texto) {

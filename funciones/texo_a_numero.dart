@@ -1,7 +1,6 @@
-import 'package:async/async.dart';
 
 import '../barril.dart';
-import '../main.dart';
+
 // 1234.1234 ---> partir por el punto enteros y decimales
 
 int textoToint(texto) {

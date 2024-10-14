@@ -1,6 +1,6 @@
-import 'longitud.dart';
+import '../barril.dart';
 
- invertir(texto) {
+invertir(texto) {
   var invertida = '';
   for (int i = longitud(texto) - 1; i >= 0; i--) {
     invertida += texto[i];
