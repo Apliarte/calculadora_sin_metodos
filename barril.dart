@@ -9,3 +9,5 @@ export 'funciones/texo_a_numero.dart';
 export 'funciones/invertir.dart';
 export 'funciones/partir_cadena.dart';
 export 'main.dart';
+export 'funciones/cuenta_caracteres_en_cadena.dart';
+export 'funciones/espacio_entre_caracteres.dart';

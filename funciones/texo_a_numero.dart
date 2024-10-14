@@ -1,7 +1,7 @@
 
 import '../barril.dart';
 
-// 1234.1234 ---> partir por el punto enteros y decimales
+// Convierte un TEXTO VALIDO EN FORMATO ESPAÑOL a numero
 
 int textoToint(texto) {
   int numEnt = 0;
