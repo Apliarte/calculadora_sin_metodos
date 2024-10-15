@@ -11,7 +11,6 @@ String getInputText(String mensaje) {
       empiezaYtermunaNumer(texto),
       contCarValid(texto, FORMATO_VALIDO_NUMEROS_ESPANIA),
       masDeUnaComa(texto),
-      
       enteroEspValido(texto)
      
     ];
@@ -22,7 +21,7 @@ String getInputText(String mensaje) {
         texto = '';
       }
       if (texto == '') {
-        print('hubo un fallo en el sistema ingrese de nuevo un numero');
+        print('Asegúrese de que el número esté en formato español, por ejemplo 1.234.567,89');
         break;
       }
     }

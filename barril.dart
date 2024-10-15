@@ -11,3 +11,5 @@ export 'funciones/partir_cadena.dart';
 export 'main.dart';
 export 'funciones/cuenta_caracteres_en_cadena.dart';
 export 'funciones/espacio_entre_caracteres.dart';
+export 'funciones/cambiar_caracter_cadena.dart';
+export 'funciones/convertir_lista_a_texto.dart';
