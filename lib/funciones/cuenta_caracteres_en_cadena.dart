@@ -1,4 +1,4 @@
-import '../barril.dart';
+import '../../barril.dart';
 
 int cuentaCarEnObjeto(String car, String texto) {
   int n = 0;

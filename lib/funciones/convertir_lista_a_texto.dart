@@ -1,4 +1,4 @@
-import '../barril.dart';
+import '../../barril.dart';
 
 String convertirListaTexto(List textoLista, String texto) {
   String nuevoTexto = '';

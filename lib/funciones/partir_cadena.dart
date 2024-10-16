@@ -1,4 +1,4 @@
-import '../barril.dart';
+import '../../barril.dart';
 //divide una cadena en partes de una lista usando el caracter indicado y eliminando este
 List miSplit(String texto, String car) {
   List<String> lista = []; //'1,2,3,4,5,6' car es ','

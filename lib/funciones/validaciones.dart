@@ -1,13 +1,16 @@
-import '../barril.dart';
+import '../../barril.dart';
 
 bool empiezaYtermunaNumer(texto) {
   return contCarValid(texto[0], FORMATO_VALIDO_NUMEROS_ENTEROS) &&
       contCarValid(texto[longitud(texto) - 1], FORMATO_VALIDO_NUMEROS_ENTEROS);
 }
 
-bool contCarValid(String texto,String carcValidos) {
+// comprueba que el texto solo contiene carecteres validos
+bool contCarValid(String texto, String carcValidos) {
   for (int i = 0; i < longitud(texto); i++) {
     if (!caracterEnObjeto(texto[i], carcValidos)) {
+      print('''Los Caracteres de $texto
+       no    coincide con los caracteres de $carcValidos''');
       return false;
     }
   }
@@ -22,7 +25,7 @@ bool enteroEspValido(String texto) {
   //ORGANIZAR QUE ESTA MAL
   //
 
-  if (contCarValid(texto, '.')) {
+  if (caracterEnObjeto('.', texto)) {
     List listaMensTers = miSplit(texto, '.');
     if (longitud(listaMensTers) > 1) {
       if (espacioMaximoEntreCaracteres(3, '.', texto)) {

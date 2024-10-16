@@ -1,4 +1,4 @@
-import '../barril.dart';
+import '../../barril.dart';
 
 String getInputText(String mensaje) {
   String texto = '';
@@ -11,7 +11,10 @@ String getInputText(String mensaje) {
       empiezaYtermunaNumer(texto),
       contCarValid(texto, FORMATO_VALIDO_NUMEROS_ESPANIA),
       masDeUnaComa(texto),
-      enteroEspValido(texto)
+      enteroEspValido(texto),
+     
+      
+
      
     ];
 

@@ -1,4 +1,4 @@
-import '../barril.dart';
+import '../../barril.dart';
 // esta funcion invierte los caracteres del la cadena que se introduzca
  invertirTexto(texto) {
   var invertida = '';
