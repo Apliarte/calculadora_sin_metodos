@@ -9,12 +9,13 @@ String getInputText(String mensaje) {
     List<bool?> listaFun = [
      
       empiezaYtermunaNumer(texto),
-      contCarValid(texto, FORMATO_VALIDO_NUMEROS_ESPANIA),
-      masDeUnaComa(texto),
-      enteroEspValido(texto),
+      contieneCarValid(texto, FORMATO_VALIDO_NUMEROS_ESPANIA),
+      sinPuntosComasSeguidos(texto),
+      posicionCorrectaPuntoComa(texto),
+      
      
       
-
+//todo: 0.987,345  este da error
      
     ];
 

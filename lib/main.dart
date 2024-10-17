@@ -14,12 +14,15 @@ const mapaNum = {
   '9': 9,
   '0': 0
 };
+
 void main() {
-    String num1 = getInputText('Escriba el primer numero');
+  String num1 = getInputText('Escriba el primer numero');
   String num2 = getInputText('Escriba el SEGUNDO numero');
 
   num resultado = convertirTextoNumDart(num1) + convertirTextoNumDart(num2);
-  print('El resultado es $resultado'); 
-
-
+  print('El resultado es $resultado');
 }
+      
+//todo: 0.987,345  este da error
+
+// para entrar en el terminal el atajo de teclado es ctrl + '
