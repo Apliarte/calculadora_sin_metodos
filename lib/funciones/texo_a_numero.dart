@@ -28,12 +28,12 @@ final longTexto = longitud(texto);
   int entero = 0;
   double decimal = 0.0;
 
-  if (caracterEnObjeto(',', texto) && caracterEnObjeto('.', texto)) {
+  if (noContienecaracterEnObjeto(',', texto) && noContienecaracterEnObjeto('.', texto)) {
     textConv = cambiarCaracterA(texto, '.', '');
     textConv = cambiarCaracterA(textConv, ',', '.');
-  } else if (caracterEnObjeto('.', texto)) {
+  } else if (noContienecaracterEnObjeto('.', texto)) {
     textConv = cambiarCaracterA(textConv, '.', '');
-  } else if (caracterEnObjeto(',', textConv)) {
+  } else if (noContienecaracterEnObjeto(',', textConv)) {
     textConv = cambiarCaracterA(texto, ',', '.');
   }
 

@@ -4,7 +4,7 @@ bool espacioMaximoEntreCaracteres(int numMax, String car, String texto) {
 //12.12.12.
   int espacios = 0;
   int longDeTexto = longitud(texto);
-  if (caracterEnObjeto(car, texto)) {
+  if (noContienecaracterEnObjeto(car, texto)) {
     for (int i = 0; i < longDeTexto; i++) {
 
 
