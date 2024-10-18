@@ -1,9 +1,9 @@
 import '../../barril.dart';
 // esta funcion comprueba si UN CARACTER esta en una cadena de caracteres validos
 
-bool noContienecaracterEnObjeto(String caracter, String caracteresValidos) {
+bool contienecaracterEnObjeto(String caracter, String caracteresValidos) {
   int longCarcateres = longitud(caracteresValidos);
- 
+
   for (int i = 0; i < longCarcateres; i++) {
     if (caracter == caracteresValidos[i]) {
       return true;
@@ -15,8 +15,9 @@ bool noContienecaracterEnObjeto(String caracter, String caracteresValidos) {
 
 // esta funcion comprueba si TODOS LOS CARACTERES de una cadena estan en una cadena de caracteres validos
 bool contieneCarValid(String texto, String carcValidos) {
+  print('contieneCarValid');
   for (int i = 0; i < longitud(texto); i++) {
-    if (!noContienecaracterEnObjeto(texto[i], carcValidos)) {
+    if (!contienecaracterEnObjeto(texto[i], carcValidos)) {
       return false;
     }
   }

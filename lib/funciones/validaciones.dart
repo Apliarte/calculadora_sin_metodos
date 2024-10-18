@@ -1,12 +1,18 @@
 import '../../barril.dart';
 
 bool empiezaYtermunaNumer(texto) {
-  if (!noContienecaracterEnObjeto(texto[0], FORMATO_VALIDO_NUMEROS_ENTEROS)) {
+  print('empiezaYtermunaNumer');
+  if (texto[0] == '.') {
+    return false;
+  }
+  if (texto[0] == ',') {
     return false;
   }
 
-  if (!noContienecaracterEnObjeto(
-      texto[longitud(texto) - 1], FORMATO_VALIDO_NUMEROS_ENTEROS)) {
+  if (texto[longitud(texto) - 1] == '.') {
+    return false;
+  }
+  if (texto[longitud(texto) - 1] == ',') {
     return false;
   }
   return true;
@@ -19,15 +25,9 @@ bool unaComaOninguna(String texto) {
 }
 
 bool posicionCorrectaPuntoComa(String texto) {
-  bool tienePunto = noContienecaracterEnObjeto(
-    '.',
-    texto,
-  );
-  //TODO CORREGIR LA LOGICA DE LA FUNCION caracterEnObjeto
-  bool tieneComas = noContienecaracterEnObjeto(
-    ',',
-    texto,
-  );
+  print('posicionCorrectaPuntoComa');
+  bool tienePunto = contienecaracterEnObjeto('.', texto);
+  bool tieneComas = contienecaracterEnObjeto(',', texto);
   print('tienePunto $tienePunto');
   print('tieneComas $tieneComas');
   if (!tieneComas && !tienePunto) {
@@ -38,35 +38,36 @@ bool posicionCorrectaPuntoComa(String texto) {
   if (tieneComas && tienePunto) {
     print('tiene Coma y punto');
     print('antes de ');
-    if (miSplit(texto, ',')[1] != '') {
-      if (!noContienecaracterEnObjeto('.', miSplit(texto, ',')[1] ?? ['0'])) {
-        return false;
-      }
-    }
-
-    if (miSplit(miSplit(texto, ',')[1], '.')[0] == '0') {
-      return false;
-    }
     if (!espacioMaximoEntreCaracteres(3, '.', miSplit(texto, ',')[0])) {
       return false;
     }
-
     if (miSplit(texto, ',')[0] == '0') {
       return false;
     }
+    if (miSplit(texto, '.')[0] == '0') {
+      return false;
+    }
+
+    return true;
   }
   if (tienePunto) {
     print('tienePunto');
     // aqui ya sabemos que no tiene coma
     if (!espacioMaximoEntreCaracteres(3, '.', texto)) {
       return false;
+    } else if (espacioMaximoEntreCaracteres(2, '.', texto)) {
+      return false;
     }
   }
   if (tieneComas) {
     print('tieneComa');
     // si tiene comas es por ya aqui estamos seguros de que solo tiene coma
-    if (longitud(miSplit(texto, ',')) > 2) {
-      return false;
+    if (longitud(miSplit(texto, ',')) > 1) {
+      if (longitud(miSplit(texto, ',')) == 2) {
+        if (contienecaracterEnObjeto('.', miSplit(texto, ',')[1])) {
+          return false;
+        }
+      }
     }
   }
 
@@ -74,12 +75,12 @@ bool posicionCorrectaPuntoComa(String texto) {
 }
 
 bool sinPuntosComasSeguidos(String texto) {
-  //1,.1=false
+  print('sinPuntosComasSeguidos');
   int longText = longitud(texto) - 1;
 
   for (int i = 0; i < longText; i++) {
-    if (noContienecaracterEnObjeto(texto[i], '.,') == true &&
-        noContienecaracterEnObjeto(texto[i + 1], ',.') == true) {
+    if (contienecaracterEnObjeto(texto[i], '.,') == true &&
+        contienecaracterEnObjeto(texto[i + 1], ',.') == true) {
       return false;
     }
   }

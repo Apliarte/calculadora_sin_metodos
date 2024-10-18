@@ -22,18 +22,19 @@ double textoToDouble(String texto) {
 }
 
 num convertirTextoNumDart(String texto) {
-final longTexto = longitud(texto);
+  final longTexto = longitud(texto);
   //'123.21'->123.21
   String textConv = texto;
   int entero = 0;
   double decimal = 0.0;
 
-  if (noContienecaracterEnObjeto(',', texto) && noContienecaracterEnObjeto('.', texto)) {
+  if (contienecaracterEnObjeto(',', texto) &&
+      contienecaracterEnObjeto('.', texto)) {
     textConv = cambiarCaracterA(texto, '.', '');
     textConv = cambiarCaracterA(textConv, ',', '.');
-  } else if (noContienecaracterEnObjeto('.', texto)) {
+  } else if (contienecaracterEnObjeto('.', texto)) {
     textConv = cambiarCaracterA(textConv, '.', '');
-  } else if (noContienecaracterEnObjeto(',', textConv)) {
+  } else if (contienecaracterEnObjeto(',', textConv)) {
     textConv = cambiarCaracterA(texto, ',', '.');
   }
 

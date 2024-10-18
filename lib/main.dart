@@ -16,12 +16,18 @@ const mapaNum = {
 };
 
 void main() {
-  String num1 = getInputText('Escriba el primer numero');
-  String num2 = getInputText('Escriba el SEGUNDO numero');
+  String texto1 = getInputText('Escriba el primer numero');
+  String texto2 = getInputText('Escriba el SEGUNDO numero');
+  String operador = eligeOperacion();
+  num num1 = convertirTextoNumDart(texto1);
+  num num2 = convertirTextoNumDart(texto2);
 
-  num resultado = convertirTextoNumDart(num1) + convertirTextoNumDart(num2);
-  print('El resultado es $resultado');
+  num resultado = operacion(operador, num1, num2);
+  //TODO numero resultado a texto resultado
+  print('El resultado de $num1 $operador $num2 = $resultado');
 }
+
+
       
 //todo: 0.987,345  este da error
 
